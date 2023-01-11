@@ -9,10 +9,13 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import android.content.Context;
 import android.os.Build;
+import java.util.List;
+import java.lang.Integer;
+import java.util.ArrayList;
 import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageInfo;
-import com.baseflow.permissionhandler;
+import com.baseflow.permissionhandler.PermissionUtils;
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
 import io.flutter.embedding.engine.plugins.activity.ActivityAware;
 
