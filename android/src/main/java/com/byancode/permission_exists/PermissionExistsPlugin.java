@@ -8,8 +8,6 @@ import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import android.content.Context;
-import java.util.List;
-import java.Util.Integer;
 import android.os.Build;
 import android.app.Activity;
 import android.content.pm.PackageManager;
