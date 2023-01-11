@@ -12,7 +12,7 @@ import android.os.Build;
 import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageInfo;
-import com.baseflow.permissionhandler.PermissionUtils;
+import com.baseflow.permissionhandler;
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
 import io.flutter.embedding.engine.plugins.activity.ActivityAware;
 
