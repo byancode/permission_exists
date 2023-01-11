@@ -1,5 +1,6 @@
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
+import 'package:permission_handler/permission_handler.dart';
 import 'permission_exists_method_channel.dart';
 
 abstract class PermissionExistsPlatform extends PlatformInterface {
@@ -27,7 +28,7 @@ abstract class PermissionExistsPlatform extends PlatformInterface {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 
-  Future<bool?> check(String permission) {
+  Future<bool?> check(Permission permission) {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 }

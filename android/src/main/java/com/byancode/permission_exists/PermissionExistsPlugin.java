@@ -14,6 +14,7 @@ import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageInfo;
 import com.baseflow.permissionhandler.PermissionUtils;
+import com.baseflow.permissionhandler.PermissionConstants;
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
 import io.flutter.embedding.engine.plugins.activity.ActivityAware;
 
@@ -37,7 +38,7 @@ public class PermissionExistsPlugin implements FlutterPlugin, ActivityAware, Met
   @Override
   public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
     if (call.method.equals("check")) {
-      final int permission = Integer.parseInt(call.arguments.toString());
+      @PermissionConstants.PermissionGroup final int permission = Integer.parseInt(call.arguments.toString());
       result.success(hasPermission(permission));
     } else if (call.method.equals("getPlatformVersion")) {
       result.success("Android " + android.os.Build.VERSION.RELEASE);
@@ -72,7 +73,7 @@ public class PermissionExistsPlugin implements FlutterPlugin, ActivityAware, Met
   }
 
 
-  public boolean hasPermission(int permission) {
+  public boolean hasPermission(@PermissionConstants.PermissionGroup int permission) {
       if (activity == null) {
           return false;
       }

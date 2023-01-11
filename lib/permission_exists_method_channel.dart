@@ -1,5 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
+// ignore: depend_on_referenced_packages
+import 'package:permission_handler/permission_handler.dart';
 
 import 'permission_exists_platform_interface.dart';
 
@@ -16,7 +18,7 @@ class MethodChannelPermissionExists extends PermissionExistsPlatform {
   }
 
   @override
-  Future<bool?> check(String permission) async {
+  Future<bool?> check(Permission permission) async {
     final result = await methodChannel.invokeMethod<bool>('check', permission);
     return result;
   }
