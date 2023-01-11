@@ -1,5 +1,6 @@
-import 'package:plugin_platform_interface/plugin_platform_interface.dart';
+// ignore_for_file: depend_on_referenced_packages
 
+import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'permission_exists_method_channel.dart';
 

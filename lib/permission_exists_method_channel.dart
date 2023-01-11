@@ -19,7 +19,7 @@ class MethodChannelPermissionExists extends PermissionExistsPlatform {
 
   @override
   Future<bool?> check(Permission permission) async {
-    final result = await methodChannel.invokeMethod<bool>('check', permission);
+    final result = await methodChannel.invokeMethod<bool>('check', permission.value);
     return result;
   }
 }
